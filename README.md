@@ -1,54 +1,93 @@
-# React + TypeScript + Vite
+# CDE Event Preparation Scheduler
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Progressive Web App (PWA) designed to help equestrians plan and schedule their competition day. This application calculates and displays a timeline for grooming, tacking up, and warm-up times based on your event schedule.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🕒 Schedule multiple events with custom times
+- ⏱️ Automatic calculation of preparation times
+- 📱 Progressive Web App (PWA) support for offline use
+- 📅 Google Calendar integration
+- 🎨 Clean, responsive interface built with Tailwind CSS
+- 📱 Installable on mobile devices
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (v16 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/cde-event-prep.git
+   cd cde-event-prep
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+### Development
+
+To start the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Building for Production
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To create a production build:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run build
+# or
+yarn build
 ```
+
+### Preview Production Build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+## Usage
+
+1. Add your events by clicking the "Add Event" button
+2. For each event, specify:
+   - Event name
+   - Event time
+   - Warm-up time (default: 30 minutes)
+   - Tacking time (default: 10 minutes)
+   - Grooming time (default: 10 minutes)
+3. View your personalized schedule
+4. Export to Google Calendar or print your schedule
+
+## PWA Features
+
+This app is installable as a Progressive Web App (PWA) on both mobile and desktop devices. When running in a supported browser, you'll see an install prompt to add the app to your home screen or applications menu.
+
+## Technologies Used
+
+- ⚛️ React 19
+- 🔷 TypeScript
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 📱 PWA Capable
+- 📅 Google Calendar Integration
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
